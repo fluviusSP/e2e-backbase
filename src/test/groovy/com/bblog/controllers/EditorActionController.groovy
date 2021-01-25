@@ -13,7 +13,7 @@ trait EditorActionController {
             fillUserName()
             fillUserPassword()
             fillUserEmail()
-            logIn()
+            waitForAngular()
             logIn()
         }
     }
@@ -23,6 +23,7 @@ trait EditorActionController {
             fillAbout()
             fillTitle()
             fillBody()
+            waitForAngular()
             submitArticle()
         }
     }
@@ -31,5 +32,10 @@ trait EditorActionController {
         getBrowser().at(ArticlePage) with {
             assert isArticleTitleCorrect()
         }
+    }
+
+    def waitForAngular(){
+        //temporary sleep it should be discussed with frontend about proper readiness marker
+        sleep(2000)
     }
 }

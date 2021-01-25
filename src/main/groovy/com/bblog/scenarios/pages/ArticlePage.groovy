@@ -15,6 +15,8 @@ class ArticlePage extends Page {
     }
 
     def isArticleTitleCorrect(){
+        println(articleTitle.text())
+        sleep(3000)
         articleTitle.text()=="Title"
     }
 }

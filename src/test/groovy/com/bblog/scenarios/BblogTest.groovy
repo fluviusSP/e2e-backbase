@@ -10,5 +10,6 @@ class BblogTest extends GebReportingTest implements EditorActionController {
     void should_add_article() {
         "log in to bblog"()
         "add article"()
+        "assert article added"()
     }
 }
